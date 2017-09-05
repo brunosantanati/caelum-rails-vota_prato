@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   VotaPrato::Application.routes.draw do
     match 'ola' => 'ola_mundo#index', via: 'get'
   end
+
+  resources :restaurantes
 end
