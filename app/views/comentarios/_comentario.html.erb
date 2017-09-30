@@ -8,7 +8,6 @@
  <% content_for :js do %>
    $('#remove_comentario_<%= comentario.id %>').bind('ajax:success',
      function(){
-       $('#remove_comentario_<%=comentario.id%>').remove();
        $('#comentario_<%=comentario.id%>').remove();
      }
    );
