@@ -9,13 +9,8 @@
   </head>
 
   <body>
-    <ul>
-      <% %w[clientes qualificacoes restaurantes].each do |controller_name| %>
-        <li>
-          <%= link_to controller_name, controller: controller_name %>
-        </li>
-      <% end %>
-    </ul>
+    <%= render "layouts/menu_principal", 
+      locals: {opcoes: %w(restaurantes clientes qualificacoes)} %>
 
     <%= yield %>
   </body>
