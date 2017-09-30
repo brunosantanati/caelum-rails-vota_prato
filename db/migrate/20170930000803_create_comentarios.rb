@@ -4,8 +4,10 @@ class CreateComentarios < ActiveRecord::Migration[5.1]
       t.text :conteudo
       t.integer :comentavel_id
       t.string :comentavel_type
-
       t.timestamps
     end
+
+    add_index :comentarios, :comentavel_type
+    add_index :comentarios, :comentavel_id
   end
 end
